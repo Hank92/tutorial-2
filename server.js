@@ -22,6 +22,6 @@ app.set('views', path.normalize(__dirname) + '/public');
 app.set('view engine' , 'html');
 app.engine('html', require('ejs').renderFile);
 
-var port = 8000;
+var port = Number(process.env.PORT || 8000);
 app.listen(8000);
 console.log('App listening on port:'  + port);
