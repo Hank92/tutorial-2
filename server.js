@@ -13,7 +13,11 @@ mongoose.connect(configDB.url); // connect to our database
 
 app.use(express.static(path.normalize(__dirname) + '/public'))
 
+app.set('views', path.normalize(__dirname) + '/public/html');
+app.set('view engine' , 'html');
+app.engine('html', require('ejs').renderFile);
 
+app.configure(function(){
 	app.use(express.logger('dev'));
 	app.use(express.json());
 	app.use(express.urlencoded());
@@ -22,6 +26,7 @@ app.use(express.static(path.normalize(__dirname) + '/public'))
 	app.use(express.methodOverride()); // put & delete
 	app.use(app.router);
 
+})
 
 require('./routes')(app);
 //Points Express to a folder where you keep static files
@@ -30,9 +35,7 @@ require('./routes')(app);
 //these 3 lines tell express that we are going to be rendering html files
 //held in the public directory which should be in the same diretory as this file
 
-app.set('views', path.normalize(__dirname) + '/public/html');
-app.set('view engine' , 'html');
-app.engine('html', require('ejs').renderFile);
+
 
 
 
