@@ -1,0 +1,55 @@
+body { 
+    background-color:#e6e7e8;
+    }
+
+
+/* HEADER
+============================================================================= */
+#header             { margin-bottom:50px; }
+
+  /* logo */
+  #logo             { color:#7e7e7e; font-family:'verdana'; font-size:70px; font-weight:bold; margin-bottom:5px; margin-top:10px; }
+  #logo span          { display:inline-block; } 
+
+/* MAIN NAV
+============================================================================= */
+#main-nav             { margin-bottom:30px; }
+
+/* SIDEBAR
+============================================================================= */
+#sidebar            {  }
+
+#sidebar-nav          {  }
+#sidebar-nav ul         { list-style:none; padding-left:0;}
+#sidebar-nav li         { list-style:none; padding-left:0; margin:0px;}
+#sidebar-nav a          { display:block; margin-bottom:10px; padding:0px; text-transform:uppercase;
+  border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px;
+}
+
+/* CONTENT
+============================================================================= */
+
+
+/* ANIMATIONS
+============================================================================= */
+
+  /* logo */
+  .dd             { animation-delay:0.2s; -moz-animation-delay:0.2s; -webkit-animation-delay:0.2s; }
+  .da             { animation-delay:0.8s; -moz-animation-delay:0.8s; -webkit-animation-delay:0.8s; }
+  .dn             { animation-delay:0.6s; -moz-animation-delay:0.6s; -webkit-animation-delay:0.6s; }
+  .dg             { animation-delay:1s; -moz-animation-delay:1s; -webkit-animation-delay:1s; }
+  .de             { animation-delay:0.4s; -moz-animation-delay:0.4s; -webkit-animation-delay:0.4s; }
+  .dr             { animation-delay:1.2s; -moz-animation-delay:1.2s; -webkit-animation-delay:1.2s; }
+
+  .zz             { animation-delay:1.4s; -moz-animation-delay:1.4s; -webkit-animation-delay:1.4s; }
+  .zo             { animation-delay:0.4s; -moz-animation-delay:0.4s; -webkit-animation-delay:0.4s; }
+  .zn             { animation-delay:0.6s; -moz-animation-delay:0.6s; -webkit-animation-delay:0.6s; }
+  .ze             { animation-delay:0.5s; -moz-animation-delay:0.5s; -webkit-animation-delay:0.5s; }
+
+  /* sidebar */
+  #side-home          { animation-delay:0.2s; -moz-animation-delay:0.2s; -webkit-animation-delay:0.2s; }
+  #side-about         { animation-delay:0.3s; -moz-animation-delay:0.3s; -webkit-animation-delay:0.3s; }
+  #side-work          { animation-delay:0.6s; -moz-animation-delay:0.6s; -webkit-animation-delay:0.6s; }
+  #side-contact         { animation-delay:0.2s; -moz-animation-delay:0.2s; -webkit-animation-delay:0.2s; }
+
+  /* content */

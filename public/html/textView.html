@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>CollegeCav</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css"><!-- load animate -->
+  <link rel='stylesheet' href='/css/style.css'>
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+
+</head>
+<body>
+
+<div class="container"> 
+       
+       <button onclick="goBack()" class= "btn btn-primary">Go Back</button>
+
+         <div class="page-header">
+          <h1>Details</h1>
+         </div>
+
+        <h3><font color = "orange">Title: </font></h3>
+        <p1><%=books.title%></p1>
+        </br>
+
+        <h3><font color = "orange">Class name: </font></h3>
+        <p1><%=books.classname%></p1>
+        </br>
+
+        <h3><font color = "orange">Edition:</font></h3>
+        <p1><%=books.edition%></p1>
+        </br>
+
+        <h3><font color = "orange">Professor:</font></h3>
+        <p1><%=books.professor%></p1>
+        </br>
+
+        <h3><font color = "orange">Price:</font></h3>
+        <p2> <%= " $ " + books.price%></p2>
+        </br>
+
+        <h3><font color = "orange">Email:</font></h3>
+        <p2> <%=books.email%></p2>
+        </br></br></br>
+
+        <form action ="/textbooks/<%= books._id %>", method ="post">
+        <input type = "hidden", name ="classname", value ="DELETE">
+        <button type="submit" class= "btn btn-primary">Delete</button>
+
+        
+      </div>
+    </div>
+</body>
+</html>

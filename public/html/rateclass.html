@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CollegeCav</title>
+
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css"><!-- load animate -->
+  <link rel='stylesheet' href='/css/style.css'>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script>
+$( document ).ready(function() {
+ 
+    $( sub ).click(function( event ) {
+ 
+        alert( "Thanks for visiting!" );
+ 
+    });
+ 
+});
+</script> 
+
+    </head>
+
+  <body>
+       <nav class="navbar navbar-default"  role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./"><Strong><i>CollegeCav</i></strong></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="about">About</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="./Textbooks">Textbooks</a></li>
+          <li><a href="./rateclass">Rate Classes</a></li>
+        </ul>
+      </li>
+    </ul>
+
+          </nav>
+    <!-- Docs nav
+    ================================================== -->
+      <div class="container"> 
+        
+        <div id="header" class="row text-center">
+        <div id="logo">
+        <span id="danger">
+        <span class="dd animated bounceInDown"><strong style="color:#00b034;">R</strong></span>
+        <span class="da animated bounceInDown"><strong style="color:#00b034;">a</strong></span>
+        <span class="dn animated bounceInDown"><strong style="color:#00b034;">t</strong></span>
+        <span class="dg animated bounceInDown"><strong style="color:#00b034;">e</strong></span>
+        </span>
+        <span id="zone">
+        <span                                 > </span>
+        <span class="de animated bounceInDown">C</span>
+        <span class="dr animated bounceInDown">l</span>
+        <span class="de animated bounceInDown">a</span>
+        <span class="dr animated bounceInDown">s</span>
+        <span class="de animated bounceInDown">s</span>
+        <span class="de animated bounceInDown">e</span>
+        <span class="de animated bounceInDown">s</span>
+        </span>
+      
+        </span>
+      </div>
+    </div>
+
+        <div class="row">
+        <div class="col-xs-12"><hr></div>
+        </div>
+
+      <div class ="row">
+        <div class="col-xs-5">
+              <button class="btn btn-default " data-toggle="modal" data-target="#myModal">
+                <span class="glyphicon glyphicon-plus"></span> Add yours
+              </button>
+        </div>
+
+        <div class="col-xs-7">
+            <form action="#" method="get">
+                
+                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                    <input type="text"  class="form-control" id="searchTerm" onkeyup="doSearch()" placeholder = "Search for classes or professors" >
+                
+            </form>
+        </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h4 class="modal-title">Post your thoughts about your class</h4>
+            </div>
+
+            <div class="modal-body">
+
+              <form role="form" method="post" action="/rateclass" >
+              <div class="form-group">
+                  <input type="text" class="form-control" name="classname" id="rateclass-classname" placeholder="Enter class name" title = "Example: CS 1112; Please be specific Introduction to Programming" required>
+              </div>
+            </br>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="professor" id="rateclass-professor" placeholder="Enter professor's name" title ="Nada Basit" required>
+            </div>
+            </br>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="avggpa" id="rateclass-avggpa" placeholder="Enter the average gpa for the class" title = "Example: A-" required>
+            </div>
+            </br>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="percentage" id="rateclass-percentage" placeholder="What was the percentage of people you think people got A" pattern ="[0-9]{1,3}" title = "Example: 15, Do not put %" required>
+            </div>
+            </br>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="fun" id="rateclass-fun" placeholder="Rate from 0 to 5 to see how fun the class was" pattern ="[0-5]{0,1}" title = "Example: 4" required>
+            </div>
+            </br>
+
+
+            <div class="form-group">                  
+              <textarea class="form-control" name="comment" id="rateclass-comment" placeholder="Please enter comments about the class" rows="6"></textarea>
+            </div>
+
+            <div class="modal-footer">
+            <div class="col-lg-4">
+            <button type="submit" id="sub" class="btn btn-primary">Submit</button> 
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    </div>
+
+      <!--closing the header-->
+      <div class="row">
+      <div class="col-xs-12"><hr></div>
+      </div>
+
+      <!-- Datatable -->
+      
+      <div class = "row">       
+      <div class = "col-md-12">
+      <table class="table" id="dataTable"> 
+        <thead>
+            <tr style=background-color:#00b034;>
+                <th height = "50">Classname</th>
+                <th height = "50">Professor</th>
+                <th height = "50">Average GPA</th>
+                <th height = "50">Percentage</th>
+                <th height = "50">Fun</th>
+                <th height = "50">Comment</th>
+            </tr>
+        </thead>
+       
+        <% for( var i = 0; i < rates.length; i++ ) { %>
+              <tbody>
+              <tr>      
+                <td height ="50"> <%= rates[i]["classname"] %> </td>
+                <td height ="50"> <%= rates[i]["professor"] %> </td>
+                <td height ="50"> <%= rates[i]["avggpa"] %> </td>
+                <td height ="50"> <%= "%" + " " + rates[i]["percentage"] %> </td>
+                <td height ="50"> <%= rates[i]["fun"] %> </td>
+                <td height ="50"> <a href= rateclass/<%=rates[i]._id %>> <button class="btn btn-default btn-lg" type ="button"> Display </button> </td>
+              </tr>
+              </tbody>
+        <% } %>
+
+        </table> 
+        </div> 
+
+        </div> <!-- Row -->
+      </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+      <script src="search.js"></script>
+
+      <script type="text/javascript" src="ejs_production.js"></script>
+
+    </body>
+
+</html>
