@@ -13,7 +13,7 @@ mongoose.connect(configDB.url); // connect to our database
 
 app.use(express.static(path.normalize(__dirname) + '/public'))
 
-app.configure(function(){
+
 	app.use(express.logger('dev'));
 	app.use(express.json());
 	app.use(express.urlencoded());
@@ -22,7 +22,6 @@ app.configure(function(){
 	app.use(express.methodOverride()); // put & delete
 	app.use(app.router);
 
-})
 
 require('./routes')(app);
 //Points Express to a folder where you keep static files

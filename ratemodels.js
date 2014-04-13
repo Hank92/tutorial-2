@@ -7,7 +7,7 @@ var rateSchema = mongoose.Schema({
 	comment  : String,
 	avggpa: String,
 	percentage: String,
-	Fun: String,
+	fun: String,
 	date: { type: Date, default: Date.now },
 
 });
